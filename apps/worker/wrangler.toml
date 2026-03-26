@@ -7,5 +7,5 @@ binding    = "KV"
 id         = "31fbd7dfe1c2430d85a561b65a360a17"
 preview_id = "d14711c1cf904b2d800996c5bc29926f"
 
-# [vars]
-# API_BASE_URL = "https://api.yourdomain.com"
+[vars]
+API_BASE_URL = "https://api.yourdomain.com"
