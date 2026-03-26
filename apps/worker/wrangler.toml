@@ -2,6 +2,11 @@ name            = "link-manager-worker"
 main            = "src/index.ts"
 compatibility_date = "2024-01-01"
 
+routes = [
+  { pattern = "lm.csalex.dev", custom_domain = true }
+]
+workers_dev = false
+
 [[kv_namespaces]]
 binding    = "KV"
 id         = "31fbd7dfe1c2430d85a561b65a360a17"
