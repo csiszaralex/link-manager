@@ -169,6 +169,10 @@ importers:
         specifier: ^5.1.4
         version: 5.1.4(webpack@5.105.4)
 
+  apps/api: {}
+
+  apps/web: {}
+
   apps/worker:
     dependencies:
       hono:
