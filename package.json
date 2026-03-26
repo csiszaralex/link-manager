@@ -10,7 +10,7 @@
     "build:all": "nx run-many -t build",
     "test:all": "nx run-many -t test",
     "lint:all": "nx run-many -t lint",
-    "release": "nx release",
+    "release": "nx release && git push --follow-tags",
     "release:version": "nx release version",
     "release:changelog": "nx release changelog"
   },
