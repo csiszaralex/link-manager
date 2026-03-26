@@ -30,16 +30,16 @@
         "currentVersionResolver": "git-tag",
         "specifierSource": "conventional-commits",
         "fallbackCurrentVersionResolver": "disk"
-      },
-      "git": {
-        "commit": true,
-        "commitMessage": "chore(release): publish",
-        "tag": true,
-        "tagPattern": "{projectName}@{version}"
       }
     },
     "changelog": {
       "projectChangelogs": true
+    },
+    "git": {
+      "commit": true,
+      "commitMessage": "chore(release): publish",
+      "tag": true,
+      "tagPattern": "{projectName}@{version}"
     }
   },
   "plugins": [
