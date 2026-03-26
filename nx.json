@@ -33,6 +33,7 @@
       }
     },
     "changelog": {
+      "workspaceChangelog": false,
       "projectChangelogs": true
     },
     "git": {
