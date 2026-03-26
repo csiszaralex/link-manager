@@ -1,13 +1,11 @@
-import { cn } from 'apps/web/lib/utils';
 import { Inter } from 'next/font/google';
 import './global.css';
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata = {
   title: 'Link Manager',
   description: 'Fast link shortener with telemetry',
 };
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export default function RootLayout({
   children,
@@ -15,8 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn('dark', 'font-sans', inter.variable)}>
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${inter.variable} min-h-screen bg-background font-sans antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
