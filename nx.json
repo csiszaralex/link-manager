@@ -23,9 +23,9 @@
   },
   "release": {
     "projectsRelationship": "independent",
-    "projects": ["apps/*", "packages/*"],
+    "projects": ["worker", "api", "web", "packages/*"],
     "version": {
-      "preVersionCommand": "pnpm dlx nx run-many -t build",
+      "preVersionCommand": "pnpm dlx nx run-many -t build --projects=worker,api,web",
       "generatorOptions": {
         "currentVersionResolver": "git-tag",
         "specifierSource": "conventional-commits",
