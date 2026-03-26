@@ -17,23 +17,24 @@ async function request<T>(
     ...init,
   });
   const data = await res.json();
-  if (!res.ok) return { data: null as T, error: data?.message ?? 'Request failed' };
+  if (!res.ok)
+    return { data: null as T, error: data?.message ?? 'Request failed' };
   return { data };
 }
 
 export const linksApi = {
-  list: () =>
-    request<Link[]>('/links'),
+  list: () => request<Link[]>('/links'),
 
   create: (dto: CreateLinkDto) =>
     request<Link>('/links', { method: 'POST', body: JSON.stringify(dto) }),
 
   update: (id: string, dto: UpdateLinkDto) =>
-    request<Link>(`/links/${id}`, { method: 'PATCH', body: JSON.stringify(dto) }),
+    request<Link>(`/links/${id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(dto),
+    }),
 
-  remove: (id: string) =>
-    request<Link>(`/links/${id}`, { method: 'DELETE' }),
+  remove: (id: string) => request<Link>(`/links/${id}`, { method: 'DELETE' }),
 
-  stats: (slug: string) =>
-    request<TelemetryStats>(`/telemetry/${slug}`),
+  stats: (slug: string) => request<TelemetryStats>(`/telemetry/${slug}`),
 };

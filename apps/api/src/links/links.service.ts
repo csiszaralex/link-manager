@@ -1,10 +1,10 @@
+import type { CreateLinkDto, UpdateLinkDto } from '@link-manager/shared-types';
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { eq } from 'drizzle-orm';
 import type { NodePgDatabase } from 'drizzle-orm/node-postgres';
 import { DRIZZLE } from '../db/drizzle.module';
 import * as schema from '../db/schema';
 import { KvSyncService } from '../kv/kv-sync.service';
-import type { CreateLinkDto, UpdateLinkDto } from '@link-manager/shared-types';
 
 type DB = NodePgDatabase<typeof schema>;
 

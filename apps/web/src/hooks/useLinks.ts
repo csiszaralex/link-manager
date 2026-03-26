@@ -1,7 +1,11 @@
 'use client';
 
+import type {
+  CreateLinkDto,
+  Link,
+  UpdateLinkDto,
+} from '@link-manager/shared-types';
 import { useCallback, useEffect, useState } from 'react';
-import type { CreateLinkDto, Link, UpdateLinkDto } from '@link-manager/shared-types';
 import { linksApi } from '../lib/api';
 
 export function useLinks() {
@@ -17,7 +21,9 @@ export function useLinks() {
     setLoading(false);
   }, []);
 
-  useEffect(() => { refresh(); }, [refresh]);
+  useEffect(() => {
+    refresh();
+  }, [refresh]);
 
   const create = async (dto: CreateLinkDto) => {
     const { data, error } = await linksApi.create(dto);

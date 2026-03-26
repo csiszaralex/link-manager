@@ -1,6 +1,6 @@
+import type { TelemetryEvent } from '@link-manager/shared-types';
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { TelemetryService } from './telemetry.service';
-import type { TelemetryEvent } from '@link-manager/shared-types';
 
 @Controller('telemetry')
 export class TelemetryController {

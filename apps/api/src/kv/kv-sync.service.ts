@@ -6,7 +6,7 @@ export class KvSyncService {
 
   private get baseUrl() {
     const account = process.env.CF_ACCOUNT_ID;
-    const ns      = process.env.CF_KV_NAMESPACE_ID;
+    const ns = process.env.CF_KV_NAMESPACE_ID;
     return `https://api.cloudflare.com/client/v4/accounts/${account}/storage/kv/namespaces/${ns}/values`;
   }
 

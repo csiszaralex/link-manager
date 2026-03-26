@@ -26,10 +26,10 @@
     "projects": ["apps/*", "packages/*"],
     "version": {
       "preVersionCommand": "pnpm dlx nx run-many -t build",
-      "conventionalCommits": true,
       "generatorOptions": {
         "currentVersionResolver": "git-tag",
-        "specifierSource": "conventional-commits"
+        "specifierSource": "conventional-commits",
+        "fallbackToRootVersion": "disk"
       }
     },
     "changelog": {
