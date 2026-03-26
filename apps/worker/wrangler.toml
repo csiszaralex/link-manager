@@ -1,0 +1,11 @@
+name            = "link-manager-worker"
+main            = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding    = "KV"
+id         = "REPLACE_WITH_KV_NAMESPACE_ID"
+preview_id = "REPLACE_WITH_KV_PREVIEW_ID"
+
+[vars]
+API_BASE_URL = "https://api.yourdomain.com"

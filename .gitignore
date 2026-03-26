@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.turbo/
+
+# Nx cache
+.nx/cache
+.nx/workspace-data
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Docker volumes
+pgdata/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Wrangler
+.wrangler/
+
+# Next.js
+.next
+out
