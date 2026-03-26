@@ -13,18 +13,17 @@ app.get('/:slug', async (c) => {
 
   if (!target) return c.text('Not Found', 404);
 
-  // Fire-and-forget — never blocks the redirect
   c.executionCtx.waitUntil(
     fetch(`${c.env.API_BASE_URL}/telemetry`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         slug,
-        ip:      c.req.header('CF-Connecting-IP'),
+        ip: c.req.header('CF-Connecting-IP'),
         country: c.req.header('CF-IPCountry'),
-        city:    c.req.header('CF-IPCity'),
-        ua:      c.req.header('User-Agent'),
-        ts:      Date.now(),
+        city: c.req.header('CF-IPCity'),
+        ua: c.req.header('User-Agent'),
+        ts: Date.now(),
       }),
     }).catch(() => undefined),
   );
