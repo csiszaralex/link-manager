@@ -34,7 +34,8 @@
     },
     "changelog": {
       "workspaceChangelog": false,
-      "projectChangelogs": true
+      "projectChangelogs": true,
+      "automaticFromRef": true
     },
     "git": {
       "commit": true,
